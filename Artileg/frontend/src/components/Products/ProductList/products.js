@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom';
 const products = (props) => {
     return (
         <div className={"container mm-4 mt-5"}>
+            <div><h2 className={"product_header"}>All products</h2></div>
             <div className={"row"}>
                 <div className={"table-responsive"}>
                     <table className={"table table-striped"}>
