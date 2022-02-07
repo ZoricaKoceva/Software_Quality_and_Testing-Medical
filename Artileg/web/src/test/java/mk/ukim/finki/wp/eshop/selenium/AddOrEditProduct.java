@@ -50,5 +50,19 @@ public class AddOrEditProduct extends AbstractPage {
         return PageFactory.initElements(driver, ProductsPage.class);
     }
 
+    public static ProductsPage deleteProduct(WebDriver driver, WebElement editButton, String name, String price, String quantity, String category, String manufacturer) {
+        editButton.click();
+        System.out.println(driver.getCurrentUrl());
+        AddOrEditProduct addOrEditProduct = PageFactory.initElements(driver, AddOrEditProduct.class);
+        addOrEditProduct.name.sendKeys(name);
+        addOrEditProduct.price.sendKeys(price);
+        addOrEditProduct.quantity.sendKeys(quantity);
+        addOrEditProduct.category.click();
+        addOrEditProduct.category.findElement(By.xpath("//option[. = '" + category + "']")).click();
+        addOrEditProduct.manufacturer.click();
+        addOrEditProduct.manufacturer.findElement(By.xpath("//option[. = '" + manufacturer + "']")).click();
 
+        addOrEditProduct.submit.click();
+        return PageFactory.initElements(driver, ProductsPage.class);
+    }
 }

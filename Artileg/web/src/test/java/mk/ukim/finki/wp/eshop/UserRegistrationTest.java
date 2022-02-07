@@ -55,7 +55,7 @@ public class UserRegistrationTest {
         Assert.assertNotNull("User is null", user);
         Assert.assertEquals("name do not mach", "name", user.getName());
         Assert.assertEquals("role do not mach", Role.ROLE_USER, user.getRole());
-        Assert.assertEquals("surename do not mach", "surename", user.getSurname());
+        Assert.assertEquals("surname do not mach", "surename", user.getSurname());
         Assert.assertEquals("password do not mach", "password", user.getPassword());
         Assert.assertEquals("username do not mach", "username", user.getUsername());
     }
