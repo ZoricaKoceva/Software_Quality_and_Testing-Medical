@@ -52,8 +52,17 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) {
 //        auth.inMemoryAuthentication()
-//                .withUser("kostadin.mishev")
-//                .password(passwordEncoder.encode("km"))
+//                .withUser("zorica.koceva")
+//                .password(passwordEncoder.encode("zk"))
+//                .authorities("ROLE_USER")
+//                .and()
+//                .withUser("admin")
+//                .password(passwordEncoder.encode("admin"))
+//                .authorities("ROLE_ADMIN");
+
+//                auth.inMemoryAuthentication()
+//                .withUser("andrej.petrushev")
+//                .password(passwordEncoder.encode("ap"))
 //                .authorities("ROLE_USER")
 //                .and()
 //                .withUser("admin")
